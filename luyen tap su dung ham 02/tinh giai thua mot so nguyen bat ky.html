@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tinhGiaiThua(gt) {
+        let giaithua = 1
+        if (gt == 1) {
+            giaithua = 1
+            return giaithua
+        } else if (gt > 1) {
+            for(let i= 1; i <= gt; i++){
+                giaithua = giaithua * i
+            }
+            return giaithua
+        }
+        else {
+            return 'giai thua ko xac dinh duoc'
+        }
+    }
+
+    let so = +prompt('Nhap so vao day')
+    let ketqua = tinhGiaiThua(so)
+    alert('Ket qua tinh giai thua la:' + ketqua)
+</script>
+</body>
+</html>

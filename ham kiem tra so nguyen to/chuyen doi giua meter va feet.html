@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>meter va feet</title>
+</head>
+<body>
+<input type="text" id="nhapso">
+<select id="luachon">
+  <option value="feet">feet</option>
+  <option value="meter">meter</option>
+</select>
+<input type="button" value="bam vo day" onclick="chuyendoi()">
+<p id="ketqua"></p>
+<script>
+  function changeFeettoMetter(feet) {
+    let meter = 0.305*feet
+    return meter
+  }
+  function chanceMettertoFeet(metter) {
+    let feet = 3.279*metter
+    return feet
+  }
+  function chuyendoi() {
+      let luachon = document.getElementById('luachon')
+      let nhapso = document.getElementById('nhapso')
+      if(luachon.value == 'feet'){
+          ketqua=changeFeettoMetter(nhapso.value)
+          document.getElementById('ketqua').innerHTML= ketqua+ "meters"
+      }
+      else{
+          ketqua=chanceMettertoFeet(nhapso.value)
+          document.getElementById('ketqua').innerHTML= ketqua+ "feet"
+      }
+      
+  }
+</script>
+</body>
+</html>

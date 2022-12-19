@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>timsao</title>
+</head>
+<body>
+<script>
+  function timSao(sao) {
+    let sao1 = ['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus']
+    let sao2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major','Leo']
+for(let i=0; i<sao1.length; i++){
+  if(sao.toLowerCase()===sao1[i].toLowerCase()){return sao2[i]}
+}
+return " "
+  }
+  function huhu() {
+    let timsao = prompt('nhap ten ngoi sao')
+    let sao= timSao(timsao)
+    if(sao==" "){document.write('khong co ten ngoi sao nao')}
+    else{document.write('ten ngoi sao tuong ung cua '+timsao+' la:' +sao)}
+    
+  }
+  huhu()
+</script>
+</body>
+</html>
